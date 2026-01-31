@@ -1,0 +1,722 @@
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-onest);
+  background-color: var(--background);
+}
+
+.seccion {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0 min(40px, 5%);
+  transition: all 0.6s ease;
+}
+.seccion .logoBig{
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  z-index: 11;
+}
+.seccionN {
+  min-height: initial;
+  justify-content: left;
+}
+
+.seccionslider{
+  animation: SliderSectionUno 18s infinite;
+  background-size: cover;
+}
+@keyframes SliderSectionUno {
+  0%{
+    background-image: url(/slider2.jpg);
+    background-position: top;
+  }
+  33%{
+    background-image: url(/slider3.jpg);
+    background-position: top;
+  }
+  66%{
+    background-image: url(/slider1.jpg);
+    background-position:top;
+  }
+  100%{
+    background-image: url(/slider2.jpg);
+    background-position: top;
+  }
+}
+
+.seccionslider::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  left: 0;
+  top: 0;
+}
+
+
+.seccion h1 {
+  color: var(--background);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  text-align: left;
+  position: relative;
+}
+
+.seccion h1 span {
+  color: var(--primario);
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.titulo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  animation: apareceArriba 1s 1;
+  margin-top: 150px;
+}
+
+@keyframes apareceArriba {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contenido {
+  position: relative;
+  width: 100%;
+  left: 0%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  min-height: 150px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.contenido .contenidoUno {
+  position: relative;
+  width: 40%;
+  height: auto;
+  min-height: 120px;
+}
+
+.contenido .contenidoUno h2 {
+  font-size: 1.4rem;
+  max-width: 80%;
+  color: var(--background);
+}
+
+.contenido .contenidoUno p {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--primario);
+  height: auto;
+  animation: apareceArriba 1s 1;
+}
+
+.contenido .contenidoUno p strong {
+  color: var(--background);
+  margin: 0 10px 0 5px;
+}
+
+.contenido .contenidoUno p span {
+  color: rgb(218, 218, 218);
+}
+
+.contenido .contenidoUno ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  animation: apareceArriba 1s 1;
+}
+
+.contenido .contenidoUno ul li {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-small;
+  margin-left: -15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.contenido .contenidoUno ul li:last-child {
+  background-color: var(--secundario);
+}
+
+.contenido .contenidoUno ul li:first-child {
+  margin-left: 0;
+}
+
+.cliente {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.contenido .contenidoDos {
+  position: relative;
+  width: 50%;
+  margin-bottom: 0;
+}
+
+.contenido .contenidoDos .flecha {
+  position: absolute;
+  bottom: 0px;
+  right: 100%;
+}
+
+.contenido .contenidoDos .texto {
+  height: auto;
+  min-height: 40px;
+  max-width: 60%;
+  color: white;
+}
+.contenido .contenidoDos .textosmap{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 20px 0;
+}
+.contenido .contenidoDos .textosmap li{
+  width: 20px;
+  height: 3px;
+  background-color: rgb(143, 143, 143);
+  border-radius: 2px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.contenido .contenidoDos .textosmap .activado{
+  background-color: white;
+}
+.contenido .contenidoDos button {
+  background-color: var(--secundario);
+  color: white;
+  margin-top: 20px;
+  animation: apareceArriba 1s 1;
+}
+
+.huellas {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 100px;
+}
+
+.huellas .huella {
+  position: relative;
+}
+
+.huellas .huella:nth-child(2) {
+  margin-bottom: 60px;
+}
+
+.huellas .huella:nth-child(3) {
+  margin-top: 160px;
+}
+
+.huellas .huella:nth-child(4) {
+  margin-bottom: 120px;
+}
+
+.huellas .huella:nth-child(5) {
+  margin-top: 100px;
+}
+
+.huellas .huella:nth-child(7) {
+  margin-bottom: 220px;
+}
+
+.huellas .huella:nth-child(8) {
+  margin-top: 120px;
+}
+
+
+/*Animacion para la segunda sección cuando el scroll pase por esa sección*/
+
+.activeSectionDos>div>div {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+
+/*Estilos de la página 3*/
+.paginaTres {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 100px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.paginaTres .textosTres {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.paginaTres .textosTres div {
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.paginaTres .textosTres div em {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.paginaTres .textosTres div em span {
+  color: var(--primario);
+}
+
+.paginaTres .textosTres>div:last-child {
+  text-align: right;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.paginaTres .textosTres>div:first-child {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.paginaTres .textosTres>div:last-child .huella {
+  margin-left: 30%;
+}
+
+.paginaTres .textosTres>div:last-child h2 {
+  width: 35%;
+  font-size: 1.5rem;
+  min-height: 120px;
+}
+
+.activeSectionTres .paginaTres .textosTres div {
+  transition: all 0.6s ease;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.paginaTres .carousel {
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+  overflow: hidden;
+}
+
+.paginaTres .carousel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: max-content;
+  animation: carousel 15s infinite alternate ease-in;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(-45%);
+  }
+}
+
+.paginaTres .carousel ul li {
+  background-color: var(--primario);
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.paginaTres .carousel ul li .fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.paginaTres .carousel ul li .desc {
+  width: 100%;
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  align-items: end;
+  justify-content: right;
+}
+
+.paginaTres .texto {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.paginaTres .texto p {
+  width: 40%;
+}
+
+/*Página 4*/
+.slider {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  animation: animationSlider 15s infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@keyframes animationSlider {
+  0% {
+    background-image: url(/slider4.jpg);
+    background-position: top;
+  }
+
+  35% {
+    background-image: url(/slider5.jpg);
+    background-position: top;
+  }
+
+  75% {
+    background-image: url(/slider6.jpg);
+    background-position: top;
+  }
+
+  100% {
+    background-image: url(/slider4.jpg);
+    background-position: top;
+  }
+}
+
+.slider .tapa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+}
+
+.slider .encabezado {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 30px;
+  position: relative;
+}
+
+.slider .encabezado h2 {
+  font-size: 1.5rem;
+  color: white;
+  width: 30%;
+}
+
+.slider .encabezado p {
+  display: flex;
+  align-items: center;
+  color: var(--primario);
+}
+
+.slider .encabezado p span {
+  color: white;
+  margin-left: 5px;
+}
+
+/*Página 5*/
+.titulos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.6s ease;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.titulos h2 {
+  width: 40%;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.form>div {
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: calc(50% - 20px);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+}
+
+.form>div:first-child {
+  background-color: var(--primario);
+}
+
+.form>div:first-child strong {
+  font-size: 1.3rem;
+  color: white;
+  position: relative;
+}
+
+.form>div:first-child ul {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 0 0;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.form>div:first-child ul li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.form>div>.perrofeliz {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.formu {
+  width: 100%;
+  background-color: var(--claroUno);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.activeSectionCuatro .titulos {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.activeSectionCuatro .form {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 765px) {
+  .seccion h1 i {
+    display: none;
+  }
+  .seccion h1 span {
+    margin-left: 10px;
+  }
+  .seccion h1{
+    line-height: 1.1;
+  }
+  
+
+  .seccion .logoBig {
+    display: none;
+  }
+  .titulo{
+    margin-top: 0px;
+  }
+  .titulo .spansco{
+    display: none;
+  }
+
+  .huellas {
+    padding: 0 10px;
+  }
+
+  .contenido {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    flex-direction: column-reverse;
+    min-height: 300px;
+  }
+
+  .contenido .contenidoUno {
+    position: relative;
+    width: 100%;
+    margin: 0px 0 35px 0;
+    min-height: 150px;
+  }
+
+  .contenido .contenidoDos {
+    position: relative;
+    width: 90%;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .contenido .contenidoUno h2 {
+    font-size: 1.4rem;
+    color: white;
+    height: auto;
+    min-height: 4rem;
+  }
+
+  .contenido .contenidoDos .texto {
+    height: auto;
+    min-height: 60px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /*Página 3*/
+  .paginaTres {
+    min-height: initial;
+    margin-bottom: 100px;
+  }
+
+  .paginaTres .textosTres>div:last-child .huella {
+    margin-left: 0;
+    position: absolute;
+    left: 100px;
+
+  }
+
+  .paginaTres .textosTres>div:last-child h2 {
+    width: 100%;
+    position: relative;
+  }
+
+  .paginaTres .carousel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: max-content;
+    animation: carouselMobile 15s infinite alternate ease-in;
+  }
+
+  @keyframes carouselMobile {
+    0% {
+      transform: translateX(-3%);
+    }
+
+    100% {
+      transform: translateX(-85%);
+    }
+  }
+
+  /*Página 4*/
+  .slider {
+    min-height: 600px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .slider .encabezado h2 {
+    width: 80%;
+  }
+
+  /*Página 5*/
+  .titulos {
+    position: relative;
+  }
+
+  .titulos h2 {
+    width: 100% !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .titulos .huella {
+    position: absolute;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+  .form>div {
+    width: 100%;
+    aspect-ratio: none;
+  }
+
+  .form > div:first-child{
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .form > div:last-child{
+    height: 500px;
+    margin-bottom: 20px;
+  }
+}

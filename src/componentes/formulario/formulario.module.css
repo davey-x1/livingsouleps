@@ -1,0 +1,61 @@
+.formulario {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 30px;
+}
+
+.inputGroup {
+    width: 100%;
+    position: relative;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+}
+
+.inputGroup input {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px var(--gris);
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-bottom: solid 1px var(--primario);
+}
+.inputCheck{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.inputCheck label{
+    margin-left: 10px;
+}
+.inputCheck label a{
+    color: var(--primario);
+}
+.formulario button{
+    width: 100%;
+    background-color: var(--secundario);
+    color: white;
+}
+.mensaje{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}

@@ -1,0 +1,237 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-onest);
+    background-color: var(--background);
+}
+
+.seccion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 100px min(40px, 5%) 0 min(40px, 5%);
+    transition: all 0.6s ease;
+    min-height: 100vh;
+    height: auto;
+    animation: aparece 1s 1;
+}
+
+.seccion .articulo {
+    width: 60%;
+    height: auto;
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion .articulo>h1 {
+    color: var(--foreground);
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1;
+    margin-top: 50px;
+}
+
+.seccion .articulo>p {
+    color: var(--gris);
+    font-size: 1.2rem;
+    margin-top: 30px;
+    width: 100%;
+    min-height: 60px;
+}
+
+.seccion .articulo>h2 {
+    color: var(--foreground);
+    margin-top: 50px;
+}
+
+.lastArticle {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--claroUno);
+}
+
+.lastArticle>div {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.lastArticle .titulo {
+    width: calc(50% - 30px);
+}
+
+.lastArticle .titulo h3 {
+    margin-bottom: 15px;
+}
+
+.lastArticle .fondo {
+    position: relative;
+    width: 50%;
+    min-height: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.lastArticle .textPublication {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+
+.lastArticle .textPublication p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+
+.lastArticle .textPublication h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.lastArticle .textPublication h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.lastArticle .textPublication img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.publicaciones {
+    width: calc(35% - 50px);
+    position: sticky;
+    top: 100px;
+    right: 0;
+}
+
+.publicaciones h3 {
+    margin-bottom: 20px;
+}
+
+.publicaciones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.publicaciones ul li {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--claroDos);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.publicaciones ul li .date {
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: var(--foreground);
+    border: solid 1px var(--foreground);
+    width: max-content;
+    font-size: small;
+    margin-bottom: 20px;
+}
+
+.publicaciones ul li>p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* Número de líneas permitidas */
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.publicaciones ul li>h4 {
+    margin-bottom: 10px;
+}
+
+.publicaciones ul li>.fondo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin-top: 30px;
+}
+.publicaciones ul li .vermas{
+    color: var(--primario);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+@media only screen and (max-width: 765px) {
+    .seccion {
+        flex-direction: column;
+        padding: 50px min(40px, 5%) 0 min(40px, 5%);
+    }
+
+    .seccion .articulo>p {
+        min-height: 120px;
+    }
+
+    .seccion .articulo {
+        width: 100%;
+        height: auto;
+    }
+
+    .publicaciones {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-top: 50px;
+    }
+
+    .lastArticle>div {
+        width: 100%;
+        position: relative;
+        height: auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+
+    .lastArticle .titulo {
+        width: 100%;
+    }
+
+    .lastArticle .fondo {
+        margin-top: 20px;
+        width: 100%;
+        min-height: 200px;
+        height: 100%;
+    }
+}

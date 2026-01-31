@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://livingosuleps.com
+
+# Sitemaps
+Sitemap: https://livingosuleps.com/sitemap.xml

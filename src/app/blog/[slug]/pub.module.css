@@ -1,0 +1,110 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-onest);
+    background-color: var(--background);
+}
+
+.seccion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 100px min(40px, 5%) 0 min(40px, 5%);
+    transition: all 0.6s ease;
+    min-height: 100vh;
+    height: auto;
+    animation: aparece 1s 1;
+    flex-direction: column;
+}
+.seccion .container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.seccion .article{
+    width: 60%;
+    height: auto;
+}
+.seccion .article>h1 {
+    color: var(--foreground);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    margin-top: 50px;
+}
+.seccion .article>p{
+    color: var(--gris);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.seccion .container .fondo{
+    width: 35%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.artf{
+    position: relative;
+    width: 60%;
+    margin-top: 40px;
+}
+
+.artf .textPublication{
+    margin-top: 30px;
+}
+.artf .textPublication p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+
+.artf .textPublication h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.artf .textPublication h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.artf .textPublication img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 765px) {
+    .seccion {
+        padding: 50px min(40px, 5%) 0 min(40px, 5%);
+    }
+    .seccion .container{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+    }
+    .seccion .article{
+        width: 100%;
+        height: auto;
+    }
+    .seccion .container .fondo{
+        width: 100%;
+        height: auto;
+        position: relative;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-top: 20px;
+        max-height: 300px;
+    }
+    .artf{
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+    }
+}

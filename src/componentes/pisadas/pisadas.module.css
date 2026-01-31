@@ -1,0 +1,37 @@
+.pisadas{
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 400px;
+    transform: rotate(20deg);
+}
+.pisadas .pisada:first-child{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.pisadas .pisada:last-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pisada:nth-child(2){
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+.pisada:nth-child(3){
+    position: absolute;
+    top: 160px;
+    right: 0;
+}
+.pisada:nth-child(4){
+    position: absolute;
+    top: 240px;
+    left: 0;
+}
+.pisada:nth-child(5){
+    position: absolute;
+    top: 320px;
+    right: 0;
+}

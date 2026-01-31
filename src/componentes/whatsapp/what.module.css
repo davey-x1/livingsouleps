@@ -1,0 +1,55 @@
+.whatsapp{
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 3;
+    background-color: rgb(28, 194, 28);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    animation: rotate 10s 4;
+    animation-delay: 5s;
+}
+.whatsapp > span{
+    position: relative;
+}
+.whatsapp::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(28, 194, 28);
+    left: 0;
+    top: 0;
+    mix-blend-mode: multiply;
+    animation: whatAnimation 2s 10;
+}
+
+@keyframes whatAnimation {
+    0%{
+        scale: 0;
+        opacity: 1;
+    }
+    100%{
+        scale: 1.5;
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    5%{
+        transform: rotate(45deg);
+    }
+    10%{
+        transform: rotate(-45deg);
+    }
+    15%{
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,28 @@
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-onest);
+    background-color: var(--background);
+}
+
+.seccion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 100px min(40px, 5%);
+    transition: all 0.6s ease;
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+}
+.seccion h2{
+    margin-bottom: 20px;
+}
+.seccion p{
+    text-align: justify;
+    max-width: 600px;
+}

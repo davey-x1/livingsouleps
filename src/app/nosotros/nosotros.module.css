@@ -1,0 +1,487 @@
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-onest);
+  background-color: var(--background);
+}
+
+.seccion {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 min(40px, 5%);
+  transition: all 0.6s ease;
+  min-height: 100vh;
+  height: auto;
+
+}
+
+.pisadasMovidas{
+  position: absolute;
+  left: 300px;
+  top: 50;
+}
+
+.centrada {
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.seccionBackground {
+  /* background-image: url(/fondo.svg);
+  background-size: cover; */
+  padding: 0 0 0 min(40px, 5%);
+  min-height: calc(100vh - 80px) !important;
+  position: relative;
+  margin-top: 80px;
+  background-position: center left;
+  background-attachment: fixed;
+}
+
+.seccionN {
+  min-height: initial;
+  justify-content: left;
+}
+
+.textoUno {
+  width: 45%;
+  transition: all 0.6s ease;
+  transform: translateY(50px);
+  opacity: 0;
+}
+.textoUno button{
+  background-color: var(--whatsapp);
+  color: white;
+  transition: all 0.4s ease;
+}
+.textoUno button span{
+  display: flex;
+  align-items: center;
+  margin-left: -18px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.textoUno button:hover > span{
+  opacity: 1;
+  margin-left: 5px;
+}
+
+.textoUno h1 {
+  color: var(--foreground);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+}
+
+.textoUno p {
+  color: var(--foreground);
+  font-size: 1.2rem;
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+.fondoUno {
+  width: 50%;
+  height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateX(100px);
+  box-sizing: border-box;
+  padding: 40px;
+}
+.fondoUno p{
+  max-width: 40%;
+  text-align: right;
+  margin: 50px 50px 0 0;
+}
+
+.activeSectionUno .fondoUno{
+  opacity: 1;
+  transform: translateX(0);
+}
+.fondoUno .fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 20px;
+}
+
+.activeSectionUno .textoUno{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.nosotros {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-size: cover;
+  animation: SliderSectionUno 18s infinite;
+}
+
+@keyframes SliderSectionUno {
+  0%{
+    background-image: url(/mascotas2.jpg);
+    background-position: top;
+  }
+  33%{
+    background-image: url(/mascotas3.jpg);
+    background-position: center;
+  }
+  66%{
+    background-image: url(/mascotas4.jpg);
+    background-position:top;
+  }
+  100%{
+    background-image: url(/mascotas2.jpg);
+    background-position: top;
+  }
+}
+
+.nosotros .fondo {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nosotros .fondo::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.712);
+}
+
+.activeSectionDos .contenido{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.contenido {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+  color: white;
+  transition: all 0.4s ease;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.contenido h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contenido p {
+  width: 60%;
+  color: rgb(199, 199, 199);
+  text-align: justify;
+}
+
+.activeSectionDos .redes{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.redes {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5%;
+  color: white;
+  transition: all 0.4s ease;
+  transform: translateX(100px);
+  opacity: 0;
+  text-align: right;
+}
+
+.redes ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.redes ul li {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.seccionconvenios {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 min(40px, 5%);
+}
+
+.seccionconvenios .convenios {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.seccionconvenios .convenios h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.seccionconvenios .convenios ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.seccionconvenios .convenios ul li {
+  list-style-image: url("/huellali.svg");
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.carousel {
+  width: 50%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.carousel ol {
+  list-style: none;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 0;
+  animation: carousel 20s infinite alternate;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(3%);
+  }
+
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+.carousel ol li {
+  width: auto;
+  height: 100px;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.carousel ol li .marca {
+  height: 100px;
+  object-fit: contain;
+}
+
+.historias {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.historias>p {
+  margin: 10px 0;
+}
+
+.historias .galeria {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  scrollbar-width: thin;
+  margin-top: 30px;
+}
+
+.historias .galeria ul {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 410px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historias .galeria ul li{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-right: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galeria ul li .foto{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.historias .galeria ul li > div{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: all 0.6s ease;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.historias .galeria ul li > div:hover{
+  opacity: 0;
+}
+
+.seccionmini {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 min(40px, 5%);
+  transition: all 0.6s ease;
+  min-height: 50vh;
+  height: auto;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.seccionmini h2{
+  width: 100%;
+  text-align: center;
+}
+.activeSectionCuatro{
+  opacity: 1;
+  transform: translateY(0);
+}
+.seccionmini ul{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.seccionmini ul li{
+  width: 25%;
+}
+.seccionmini ul li h3{
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--primario);
+  margin-bottom: 10px;
+}
+.seccionmini ul li p{
+  text-align: justify;
+}
+
+@media only screen and (max-width: 765px) {
+  .seccion{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pisadasMovidas{
+    position: absolute;
+    left: 0px;
+    top: 50;
+  }
+  .textoUno {
+    width: 100%;
+    padding-right: min(40px, 5%);
+  }
+  .textoUno p {
+    font-size: 1rem;
+    margin-top: 10px;
+    min-height: 100px;
+  }
+  .fondoUno {
+    width: 100%;
+    height: max-content;
+  }
+  .fondoUno p{
+    max-width: 60%;
+    position: relative;
+  }
+  .fondoUno .fondo {
+    width: 100%;
+    height: 250px;
+  }
+  .contenido p {
+    width: 100%;
+    color: rgb(199, 199, 199);
+  }
+
+  .seccionconvenios .convenios {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  }
+  .carousel {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+
+  .seccionmini {
+    margin-top: 50px;
+  }
+  .seccionmini ul{
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+  }
+  
+  .seccionmini ul li{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+}
