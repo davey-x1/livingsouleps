@@ -42,8 +42,7 @@ export const planes: Plan[] = [
       "Laboratorios completos",
       "Cirugías",
       "Terapias",
-      "Baños",
-      "Además de todo lo del plan básico"
+      "Baños"
     ],
     costo: 148000,
   },
