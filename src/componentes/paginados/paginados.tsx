@@ -6,6 +6,24 @@ import { IconShoppingCart } from "@tabler/icons-react";
 import MasInfo from "./masinfo";
 import { Plan, planes } from "@/data/planes";
 
+export async function peticion(apiUrl: any) {
+    try {
+        const consulta = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        if (!consulta.ok) {
+            throw new Error("Error en la consulta");
+        }
+        const respuesta = await consulta.json();
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export default function Paginados() {
     const [active, setActive] = useState(0);
     const [seleccionado, setSeleccionado] = useState<Plan | undefined>(
