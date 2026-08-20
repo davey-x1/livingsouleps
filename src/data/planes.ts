@@ -66,6 +66,6 @@ export const planes: Plan[] = [
       "Pre-existencias",
       "Baños"
     ],
-    costo: 148000,
+    costo: 222000,
   }
 ];
