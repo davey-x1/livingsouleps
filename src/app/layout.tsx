@@ -14,11 +14,11 @@ const onset = Onest({
 export const metadata: Metadata = {
   title: "Living Soul | La mejor EPS para mascotas en Colombia",
   description:
-    "Protege la salud de tu mascota con Living Soul, la mejor EPS para perros y gatos en Colombia. Atención integral, cobertura nacional y planes accesibles. Descubre más ahora.",
+    "Protege la salud de tu perro o gato con Living Soul, un plan de salud para mascotas en Colombia con atención veterinaria, cobertura nacional y opciones accesibles.",
   openGraph: {
     title: "Living Soul | La mejor EPS para mascotas en Colombia",
     description:
-      "Protege la salud de tu mascota con Living Soul, la mejor EPS para perros y gatos en Colombia. Atención integral, cobertura nacional y planes accesibles. Descubre más ahora.",
+      "Protege la salud de tu perro o gato con Living Soul, un plan de salud para mascotas en Colombia con atención veterinaria, cobertura nacional y opciones accesibles.",
     url: "https://www.livingsoul.com", // Cambia esto con la URL de tu sitio web
     siteName: "Living Soul",
     images: [
