@@ -20,10 +20,6 @@ export default function Home() {
         <div className={styles.titulo}>
           <h1>La mejor <span> EPS</span> para <br className={styles.spansco} /> mascotas en Colombia</h1>
         </div>
-        <p className={styles.texto}>
-          Protege la salud de tu perro o gato con Living Soul, un plan de salud
-          para mascotas con cobertura nacional y servicios veterinarios.
-        </p>
         <PageUno styles={styles} />
       </section>
       <ScrollSection id="planes" activeClass={styles.activeSectionDos} className={styles.seccion}>
